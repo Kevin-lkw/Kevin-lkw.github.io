@@ -1,0 +1,28 @@
+<div class="pub-card" style="display:flex; align-items:center; margin-bottom:25px;">
+
+  <div style="flex:0 0 300px;">
+    <img src="{{ include.image }}" alt="{{ include.title }}" style="width:100%; border-radius:8px;">
+  </div>
+
+  <div style="flex:1; margin-left:20px; line-height:1.4;">
+    <h3 style="margin:0;">{{ include.title }}</h3>
+    {% if include.authors %}
+      {% assign author_list = include.authors | replace: 'Kewei Lian', '**Kewei Lian**' %}
+      {% assign formatted_authors = author_list | markdownify | remove: '<p>' | remove: '</p>' %}
+      <p style="margin:6px 0;">{{ formatted_authors }}</p>
+    {% endif %}
+    {% if include.summary %}
+      <p style="margin:6px 0;">{{ include.summary }}</p>
+    {% endif %}
+    <p style="margin:6px 0; color:gray;">
+      {{ include.venue }}
+      {% if include.links %}
+        /
+        {% for link in include.links %}
+          <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>{% if forloop.last == false %} / {% endif %}
+        {% endfor %}
+      {% endif %}
+    </p>
+  </div>
+
+</div>

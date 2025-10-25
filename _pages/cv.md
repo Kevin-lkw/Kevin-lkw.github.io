@@ -9,38 +9,37 @@ redirect_from:
 
 {% include base_path %}
 
+{% include base_path %}
+
+You can download my CV as a PDF using the link below.
+
+<p>
+  <a class="btn btn--primary" href="{{ base_path }}/files/cv.pdf" download
+  style="background-color:#28A745; color:white; border:none;">
+  Download
+  </a>
+</p>
+
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* 2026.1 - Present: Ph.D in Computer Science, Nation University of Singapore
+* 2021.9 - 2025.6: B.S. in Computer Science, Peking University
 
 Work experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* 2024.9-2025.9: Intern Researcher
+  * Beijing Institute of General Artificial Intelligence (BIGAI)
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
+<!-- Skills
 ======
 * Skill 1
 * Skill 2
   * Sub-skill 2.1
   * Sub-skill 2.2
   * Sub-skill 2.3
-* Skill 3
+* Skill 3 -->
 
+<!-- 
 Publications
 ======
   <ul>{% for post in site.publications reversed %}
@@ -61,4 +60,4 @@ Teaching
   
 Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+* Currently signed in to 43 different slack teams -->
