@@ -9,7 +9,6 @@ redirect_from:
 
 {% include base_path %}
 
-{% include base_path %}
 
 You can download my CV as a PDF using the link below.
 
