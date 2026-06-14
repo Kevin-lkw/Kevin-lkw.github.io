@@ -1,8 +1,8 @@
 ---
-title: "Toward Memory-Aided World Models: Benchmarking via Spatial Consistency"
+title: "LoopNav: Benchmarking Spatial Consistency in World Models"
 image: /images/papers/loopnav.png
-venue: Arxiv Preprint
-authors: "Kewei Lian, Shaofei Cai, Yilun Du, Yitao Liang"
+venue: ICML 2026 CTB workshop
+authors: "Kewei Lian, Shaofei Cai, Yitao Liang, Anji Liu"
 links:
   # - name: Website
   #   url: https://craftjarvis.github.io/ROCKET-1/

@@ -12,8 +12,8 @@ National University of Singapore (NUS), advised by Prof. [Anji Liu](https://liua
 I obtained my B.S. degree in Computer Science from Peking University (PKU) in 2025. I was in the team of [CraftJavis](https://craftjarvis.github.io/), advised by Prof. [Yitao Liang](https://scholar.google.com/citations?user=KVzR1XEAAAAJ&hl=en). I also worked with Prof [Di He](https://dihe-pku.github.io/) on the topic of NLP during my undergraduate studies.
 
 ## Research interests:
-- Machine Learning Architecture and Interpretablity
-- Designing Memory for Models and Agents
+- Designing Memory for Models and Agents: What is the best way to equip models with memory? What is the form and How to use it?
+- How to process context in a proper and efficient way? Context is a natural form of memory, and can we move beyond vanilla quadratic attention to process it?
 
 # Publications {#publications}
 Below is a list of selected publications. Please refer to my [Google Scholar](https://scholar.google.com/citations?user=ziHLMt4AAAAJ) for the full list of publications.
@@ -32,6 +32,7 @@ Below is a list of selected publications. Please refer to my [Google Scholar](ht
 {% endfor %}
 
 # Others
-In my spare time, I enjoy swimming, hiking, and playing baseball~
+In my spare time, I enjoy playing badminton, baseball, and swimming. I try watersports in Singapore like
+Sailing and Kayaking, which are really fun!!
 
 I'm always happy to chat! Feel free to reach out to me via [email](mailto:liankewei2003@gmail.com) for anything!
