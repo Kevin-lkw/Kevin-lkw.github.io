@@ -13,7 +13,7 @@ redirect_from:
 You can download my CV as a PDF using the link below.
 
 <p>
-  <a class="btn btn--primary" href="{{ base_path }}/files/cv.pdf" download
+  <a class="btn btn--primary" href="{{ base_path }}/files/CV.pdf" download
   style="background-color:#28A745; color:white; border:none;">
   Download
   </a>

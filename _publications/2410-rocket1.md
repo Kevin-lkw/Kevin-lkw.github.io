@@ -7,7 +7,7 @@ links:
   - name: Website
     url: https://craftjarvis.github.io/ROCKET-1/
   - name: Paper
-    url: https://arxiv.org/abs/2412.02125
+    url: https://arxiv.org/abs/2410.17856
   - name: Code
     url: https://github.com/CraftJarvis/ROCKET-1
 ---
