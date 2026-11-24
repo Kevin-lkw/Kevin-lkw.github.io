@@ -4,35 +4,54 @@
     {% if link.name == 'Website' %}{% assign card_url = link.url %}{% break %}{% endif %}
   {% endfor %}
 {% endunless %}
-<div class="pub-card{% if card_url %} pub-card--linked{% endif %}" style="display:flex; align-items:center; margin-bottom:25px;">
+{% unless card_url %}
+  {% for link in include.links %}
+    {% if link.name == 'Paper' %}{% assign card_url = link.url %}{% break %}{% endif %}
+  {% endfor %}
+{% endunless %}
+<div class="pub-card{% if card_url %} pub-card--linked{% endif %}">
 
   {% if card_url %}
-    <a class="pub-card__overlay" href="{{ card_url }}" target="_blank" aria-label="{{ include.title }} project website"></a>
+    <a class="pub-card__overlay" href="{{ card_url }}" target="_blank" aria-label="Open {{ include.title }}"></a>
   {% endif %}
 
-  <div style="flex:0 0 300px;">
-    <img src="{{ include.image }}" alt="{{ include.title }}" style="width:100%; border-radius:8px;">
+  <div class="pub-card__media">
+    <img src="{{ include.image }}" alt="{{ include.title }}" loading="lazy">
   </div>
 
-  <div style="flex:1; margin-left:20px; line-height:1.4;">
-    <h3 style="margin:0;">{{ include.title }}</h3>
+  <div class="pub-card__body">
+    <h3 class="pub-card__title">{{ include.title }}</h3>
     {% if include.authors %}
       {% assign author_list = include.authors | replace: 'Kewei Lian', '**Kewei Lian**' %}
       {% assign formatted_authors = author_list | markdownify | remove: '<p>' | remove: '</p>' %}
-      <p style="margin:6px 0;">{{ formatted_authors }}</p>
+      <p class="pub-card__authors">{{ formatted_authors }}</p>
     {% endif %}
     {% if include.summary %}
-      <p style="margin:6px 0;">{{ include.summary }}</p>
+      <p class="pub-card__summary">{{ include.summary }}</p>
     {% endif %}
-    <p class="pub-card__links" style="margin:6px 0; color:gray;">
-      {{ include.venue }}
-      {% if include.links %}
-        /
+    {% if include.venue %}
+      {% assign venue_lower = include.venue | downcase %}
+      <p class="pub-card__venue">
+        <span class="pub-tag{% if venue_lower contains 'arxiv' or venue_lower contains 'preprint' %} pub-tag--preprint{% endif %}">{{ include.venue }}</span>
+      </p>
+    {% endif %}
+    {% if include.links %}
+      <p class="pub-card__links">
         {% for link in include.links %}
-          <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>{% if forloop.last == false %} / {% endif %}
+          {% assign icon = 'fas fa-link' %}
+          {% if link.name == 'Website' %}
+            {% assign icon = 'fas fa-globe' %}
+          {% elsif link.url contains 'arxiv.org' %}
+            {% assign icon = 'ai ai-arxiv' %}
+          {% elsif link.url contains 'github.com' %}
+            {% assign icon = 'fab fa-github' %}
+          {% elsif link.name == 'Paper' %}
+            {% assign icon = 'fas fa-file-lines' %}
+          {% endif %}
+          <a href="{{ link.url }}" target="_blank"><i class="{{ icon }}" aria-hidden="true"></i>{{ link.name }}</a>
         {% endfor %}
-      {% endif %}
-    </p>
+      </p>
+    {% endif %}
   </div>
 
 </div>
