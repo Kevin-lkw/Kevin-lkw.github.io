@@ -1,4 +1,14 @@
-<div class="pub-card" style="display:flex; align-items:center; margin-bottom:25px;">
+{% assign card_url = include.website %}
+{% unless card_url %}
+  {% for link in include.links %}
+    {% if link.name == 'Website' %}{% assign card_url = link.url %}{% break %}{% endif %}
+  {% endfor %}
+{% endunless %}
+<div class="pub-card{% if card_url %} pub-card--linked{% endif %}" style="display:flex; align-items:center; margin-bottom:25px;">
+
+  {% if card_url %}
+    <a class="pub-card__overlay" href="{{ card_url }}" target="_blank" aria-label="{{ include.title }} project website"></a>
+  {% endif %}
 
   <div style="flex:0 0 300px;">
     <img src="{{ include.image }}" alt="{{ include.title }}" style="width:100%; border-radius:8px;">
@@ -14,7 +24,7 @@
     {% if include.summary %}
       <p style="margin:6px 0;">{{ include.summary }}</p>
     {% endif %}
-    <p style="margin:6px 0; color:gray;">
+    <p class="pub-card__links" style="margin:6px 0; color:gray;">
       {{ include.venue }}
       {% if include.links %}
         /

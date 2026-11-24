@@ -41,3 +41,26 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
+/* Clickable publication cards: the whole card links to the project website */
+.pub-card {
+  position: relative;
+  padding: 10px;
+  margin-left: -10px;
+  margin-right: -10px;
+  border-radius: 10px;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+.pub-card--linked:hover {
+  background-color: rgba(0, 0, 0, 0.035);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+.pub-card__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+}
+.pub-card__links a {
+  position: relative;
+  z-index: 2;
+}

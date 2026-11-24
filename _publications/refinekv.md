@@ -6,6 +6,8 @@ authors: "Kewei Lian, Jiayi Zhai, Anji Liu"
 links:
   - name: Website
     url: https://kevin-lkw.github.io/RefineKV-release/
+  - name: Paper
+    url: https://arxiv.org/abs/2611.28171
   - name: Code
     url: https://github.com/Kevin-lkw/RefineKV-release
   - name: vLLM Plugin
